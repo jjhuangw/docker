@@ -13,3 +13,27 @@ docker images
 
 # run image
 docker run [image-name]
+
+# mount folder
+$ docker-machine ssh default
+$ sudo mkdir --parents /docker_local_hub
+$ sudo mount -t vboxsf docker_local_hub /docker_local_hub/
+$ docker build -t hello_world .
+$ docker run hello_world
+
+# run web ap
+docker run --rm -it -d -p 8080:8080 imageName
+--rm removes the container as soon as you stop it
+-p forwards the port to your host (or if you use boot2docker to this IP)
+-it allows interactive mode, so you see if something get's deployed
+-d  runs the container in the background (as a so-called daemon]
+
+# show docker machine ip
+docker-machine ip
+
+# show process
+docker ps -l
+-l shows only the details of the last container started.
+
+# hello world
+http://192.168.99.100:8080/helloWorld/helloWorld.jsp
