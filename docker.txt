@@ -1,0 +1,15 @@
+# restart
+docker-machine restart
+# check if any docker machines are running
+docker-machine ls
+# stop container
+$ docker stop [Container ID]
+
+# build image
+docker build
+
+# list image
+docker images
+
+# run image
+docker run [image-name]
